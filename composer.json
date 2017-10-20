@@ -1,0 +1,56 @@
+{
+    "name": "netgen/rss-feed-bundle",
+    "description": "RSS Feed generator for eZ Platform",
+    "type": "ezplatform-bundle",
+    "keywords": [
+        "ezpublish",
+        "ezplatform",
+        "rss",
+        "atom",
+        "feed",
+        "netgen",
+        "rss-feed-bundle"
+    ],
+    "homepage": "https://github.com/netgen/NetgenRSSFeedBundle",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Netgen",
+            "homepage": "http://www.netgenlabs.com"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0|~7.1",
+        "ezsystems/ezpublish-kernel": "^6.0",
+        "miniflux/picofeed": "^0.1.35"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "matthiasnoback/symfony-config-test": "~2.0",
+        "matthiasnoback/symfony-dependency-injection-test": "~1.0",
+        "friendsofphp/php-cs-fixer": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netgen\\RssFeedBundle\\": "bundle"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Netgen\\RssFeedBundle\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "@php vendor/bin/phpunit --colors=always",
+        "coverage": "@php -dzend_extension=xdebug.so vendor/bin/phpunit --colors=always",
+        "fix": "@php vendor/bin/php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
