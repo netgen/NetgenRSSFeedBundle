@@ -1,0 +1,7 @@
+netgen_rss_feed_homepage:
+    path:     /
+    defaults: { _controller: NetgenRssFeedBundle:Default:index }
+
+create_feed:
+    path:     /netgen/rss-feed
+    defaults: { _controller: NetgenRssFeedBundle:Rss:createFeed }

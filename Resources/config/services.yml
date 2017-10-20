@@ -1,0 +1,20 @@
+services:
+    netgen_rss_feed.content_type_resolver:
+        class: Netgen\RssFeedBundle\Core\ContentTypeResolver
+        arguments:
+            - "@ezpublish.api.service.content_type"
+
+    netgen_rss_feed.registry.rss:
+        class: Netgen\RssFeedBundle\Core\Registry\RssContentTypeConverterRegistry
+        arguments:
+            - "@netgen_rss_feed.content_type_resolver"
+
+    netgen_rss_feed.service.rss:
+        class: Netgen\RssFeedBundle\Core\Service\RssService
+        arguments:
+            - "@netgen_rss_feed.registry.rss"
+
+    netgen_rss_feed.converters.blog_post:
+        class: Netgen\RssFeedBundle\Converters\BlogPostConverter
+        tags:
+            - { name: netgen_rss_feed.converter.rss }
