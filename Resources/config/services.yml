@@ -18,3 +18,8 @@ services:
         class: Netgen\RssFeedBundle\Converters\BlogPostConverter
         tags:
             - { name: netgen_rss_feed.converter.rss }
+
+    netgen_rss_feed.core.criteria_builder:
+        class: Netgen\RssFeedBundle\Core\CriteriaBuilder\Builder
+        arguments:
+            - "@ezpublish.api.service.location"
