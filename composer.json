@@ -12,7 +12,7 @@
         "rss-feed-bundle"
     ],
     "homepage": "https://github.com/netgen/NetgenRSSFeedBundle",
-    "license": "GPL-2.0",
+    "license": "GPL-2.0-only",
     "authors": [
         {
             "name": "Netgen",
